@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+
+  "id": "oldcraftallowplus",
+  "version": "1.0.0",
+
+  "name": "OldCraftAllow Plus",
+  "description": "Adds old Minecraft crafting recipes back.",
+
+  "authors": [
+    "ExtraTeam"
+  ],
+
+  "contact": {
+    "homepage": "https://modrinth.com/project/oldcraftallow-plus/versions",
+    "sources": "https://github.com/MCPRniconico/OldCraftAllow-Plus",
+    "issues": "https://github.com/MCPRniconico/OldCraftAllow-Plus/issues"
+  },
+
+  "license": "MIT",
+
+  "icon": "assets/oldcraftallowplus/icon.png",
+
+  "environment": "*",
+
+  "entrypoints": {
+    "main": [
+      {
+        "adapter": "kotlin",
+        "value": "org.extrateam.java.OldCraftAllowPlus"
+      }
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-language-kotlin": "*",
+    "fabric-api": "*",
+    "minecraft": ">=26.1 <26.3",
+    "java": ">=21"
+  }
+}
