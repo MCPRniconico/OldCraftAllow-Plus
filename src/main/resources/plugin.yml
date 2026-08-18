@@ -1,6 +1,7 @@
-name: Extra Recipe(Old Craftallow Plus Bukkit)
+name: ExtraRecipe
 version: 1.0.0
 main: org.extrateam.java.ExtraRecipe
 api-version: '1.16'
+folia-supported: true
 author: ExtraTeam
-description: Adds custom crafting recipes.
+description: Custom recipe plugin

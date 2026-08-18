@@ -11,13 +11,59 @@ class ExtraRecipe : JavaPlugin() {
 
     override fun onEnable() {
 
+        saveDefaultConfig()
+
         registerEnchantedGoldenApple()
         registerNetherWart()
 
         logger.info("ExtraRecipe enabled!")
     }
 
+    private fun registerCobwebToString() {
+
+        if (!config.getBoolean(
+                "recipes.cobweb_to_string.enabled",
+                true
+            )
+        ) {
+            logger.info("Cobweb to String recipe is disabled.")
+            return
+        }
+
+        val result = ItemStack(
+            Material.STRING,
+            9
+        )
+
+        val key = NamespacedKey(
+            this,
+            "cobweb_to_string"
+        )
+
+        val recipe = ShapelessRecipe(
+            key,
+            result
+        )
+
+        recipe.addIngredient(
+            Material.COBWEB
+        )
+
+        server.addRecipe(recipe)
+    }
+
     private fun registerEnchantedGoldenApple() {
+
+        if (!config.getBoolean(
+                "recipes.enchanted_golden_apple.enabled",
+                true
+            )
+        ) {
+            logger.info(
+                "Enchanted Golden Apple recipe is disabled."
+            )
+            return
+        }
 
         val result = ItemStack(
             Material.ENCHANTED_GOLDEN_APPLE
@@ -53,6 +99,17 @@ class ExtraRecipe : JavaPlugin() {
     }
 
     private fun registerNetherWart() {
+
+        if (!config.getBoolean(
+                "recipes.nether_wart_block_to_nether_wart.enabled",
+                true
+            )
+        ) {
+            logger.info(
+                "Nether Wart recipe is disabled."
+            )
+            return
+        }
 
         val result = ItemStack(
             Material.NETHER_WART,

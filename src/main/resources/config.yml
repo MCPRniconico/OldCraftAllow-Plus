@@ -1,0 +1,10 @@
+recipes:
+
+  enchanted_golden_apple:
+    enabled: true
+
+  nether_wart_block_to_nether_wart:
+    enabled: true
+
+  cobweb_to_string:
+    enabled: true
